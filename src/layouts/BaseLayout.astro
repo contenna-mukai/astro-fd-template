@@ -1,0 +1,57 @@
+---
+import { SITE_TITLE } from '@/constants';
+
+import GTM from '@/common/gtm.astro';
+import GTMNoScript from '@/common/gtm_noscript.astro';
+import Head from '@/common/head.astro';
+import BodyEnd from '@/common/body_end.astro';
+
+type Props = {
+	title: string;
+	description: string;
+	path: string;
+	type?: string;
+};
+
+const { title, description, path, type } = Astro.props;
+
+const url = new URL(path, Astro.site);
+const ogType = type ?? 'website';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head prefix="og: http://ogp.me/ns#">
+		<GTM />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={`${Astro.site}${path}`} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={`${Astro.site}${path}`} />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:image" content={`${Astro.site}/common/images/ogp.jpg`} />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:site_name" content={SITE_TITLE} />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400..700&display=swap" rel="stylesheet" />
+
+		<Head />
+
+		<script src="@/assets/scripts/common.js"></script>
+		<slot name="scripts" />
+	</head>
+	<body>
+		<GTMNoScript />
+
+		<slot />
+
+		<BodyEnd />
+	</body>
+</html>

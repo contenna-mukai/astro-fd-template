@@ -1,0 +1,32 @@
+---
+interface Source {
+  srcset: string;
+  type?: string;
+  media?: string;
+}
+
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  sources?: Source[]; // picture 用
+}
+
+const { src, alt = "", class: className, sources = [] } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+{sources.length > 0 ? (
+  <picture>
+    {sources.map((s) => (
+      <source
+        srcset={baseUrl + s.srcset}
+        {...(s.type ? { type: s.type } : {})}
+        {...(s.media ? { media: s.media } : {})}
+      />
+    ))}
+    <img src={baseUrl + src} alt={alt} {...(className ? { class: className } : {})} />
+  </picture>
+) : (
+  <img src={baseUrl + src} alt={alt} {...(className ? { class: className } : {})} />
+)}

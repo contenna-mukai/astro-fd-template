@@ -1,0 +1,29 @@
+---
+import { pagePaths,  } from '@/constants';
+import Layout from '@/layouts/Layout.astro';
+import '@/assets/styles/pages/index.scss';
+
+import BaseImage from '@/components/BaseImage.astro';
+
+const page = {
+	path: pagePaths['ホーム'],
+};
+---
+
+<Layout title="" description="" path={page.path}>
+	<Fragment slot="scripts">
+		<script src="@/assets/scripts/pages/index.js"></script>
+	</Fragment>
+
+	{page.path}
+	<h1>index.html</h1>
+	<h2>index.html</h2>
+	<h3>index.html</h3>
+	<h4>index.html</h4>
+	<BaseImage
+		src="/assets/images/index/dummy.png"
+		sources={[
+			{srcset: "/assets/images/index/dummy2.png", media: "(min-width: 768px)"}
+		]}
+	/>
+</Layout>

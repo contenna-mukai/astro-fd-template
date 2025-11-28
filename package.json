@@ -1,0 +1,28 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"dev": "astro dev --host",
+		"format": "prettier -w .",
+		"format:dist": "prettier -w ./dist/ --ignore-path .prettierignore",
+		"preview": "astro preview --host",
+		"serve": "browser-sync start --server 'dist' --no-ui"
+	},
+	"dependencies": {
+		"sanitize.css": "^13.0.0"
+	},
+	"devDependencies": {
+		"astro": "^5.16.2",
+		"autoprefixer": "^10.4.22",
+		"browser-sync": "^3.0.2",
+		"prettier": "^3.7.1",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-package": "^2.0.0",
+		"sass": "^1.94.2"
+	},
+	"volta": {
+		"node": "24.11.1"
+	}
+}

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+type Props = {
+	title: string;
+	description: string;
+	path: string;
+};
+
+const { title, description, path } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} path={path}>
+	<Fragment slot="scripts">
+		<slot name="scripts" />
+	</Fragment>
+
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</BaseLayout>

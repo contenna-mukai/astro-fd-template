@@ -1,0 +1,5 @@
+@use '@/assets/styles/abstracts' as a;
+
+.u-visually-hidden {
+	@include a.visually-hidden();
+}
