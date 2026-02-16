@@ -11,16 +11,16 @@
 		"serve": "browser-sync start --server 'dist' --no-ui"
 	},
 	"dependencies": {
-		"sanitize.css": "^13.0.0"
+		"sanitize.css": "^13.0.0",
+		"sass-embedded": "^1.97.3"
 	},
 	"devDependencies": {
-		"astro": "^5.16.6",
-		"autoprefixer": "^10.4.23",
+		"astro": "^5.17.2",
+		"autoprefixer": "^10.4.24",
 		"browser-sync": "^3.0.2",
-		"prettier": "^3.7.4",
+		"prettier": "^3.8.1",
 		"prettier-plugin-astro": "^0.14.1",
-		"prettier-plugin-package": "^2.0.0",
-		"sass": "^1.97.2"
+		"prettier-plugin-package": "^2.0.0"
 	},
 	"volta": {
 		"node": "24.11.1"
