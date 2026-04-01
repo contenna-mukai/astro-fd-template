@@ -1,0 +1,26 @@
+diff --git a/node_modules/astro/.DS_Store b/node_modules/astro/.DS_Store
+new file mode 100644
+index 0000000..fa6e6c3
+Binary files /dev/null and b/node_modules/astro/.DS_Store differ
+diff --git a/node_modules/astro/dist/core/build/css-asset-name.js b/node_modules/astro/dist/core/build/css-asset-name.js
+index 2542499..12efee1 100644
+--- a/node_modules/astro/dist/core/build/css-asset-name.js
++++ b/node_modules/astro/dist/core/build/css-asset-name.js
+@@ -31,7 +31,7 @@ function createSlugger(settings) {
+   const pagesDir = viteID(new URL("./pages", settings.config.srcDir));
+   const indexPage = viteID(new URL("./pages/index", settings.config.srcDir));
+   const map = /* @__PURE__ */ new Map();
+-  const sep = "-";
++  const sep = "/";
+   return function(id, ctx) {
+     const parents = Array.from(getTopLevelPageModuleInfos(id, ctx));
+     const allParentsKey = parents.map((page) => page.id).sort().join("-");
+@@ -39,7 +39,7 @@ function createSlugger(settings) {
+     let dir = firstParentId;
+     let key = "";
+     let i = 0;
+-    while (i < 2) {
++    while (i < 10) {
+       if (dir === pagesDir) {
+         break;
+       }
