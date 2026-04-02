@@ -8,15 +8,14 @@
 		"format": "prettier -w .",
 		"format:dist": "prettier -w ./dist/ --ignore-path .prettierignore",
 		"preview": "astro preview --host",
-		"serve": "browser-sync start --server 'dist' --no-ui",
-		"postinstall": "patch-package"
+		"serve": "browser-sync start --server 'dist' --no-ui"
 	},
 	"dependencies": {
 		"sanitize.css": "^13.0.0",
 		"sass-embedded": "^1.98.0"
 	},
 	"devDependencies": {
-		"astro": "^5.18.1",
+		"astro": "^6.1.3",
 		"autoprefixer": "^10.4.27",
 		"browser-sync": "^3.0.2",
 		"patch-package": "^8.0.1",
