@@ -15,7 +15,6 @@ type Props = {
 
 const { title, description, path, type } = Astro.props;
 
-const url = new URL(path, Astro.site);
 const ogType = type ?? 'website';
 ---
 
@@ -33,7 +32,7 @@ const ogType = type ?? 'website';
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={`${Astro.site}${path}`} />
 		<meta property="og:locale" content="ja_JP" />
-		<meta property="og:image" content={`${Astro.site}/common/images/ogp.jpg`} />
+		<meta property="og:image" content={`${Astro.site}common/images/ogp.jpg`} />
 		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content={SITE_TITLE} />
 		<meta name="twitter:card" content="summary_large_image" />

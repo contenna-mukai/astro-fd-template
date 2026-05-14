@@ -5,25 +5,24 @@
 		"astro": "astro",
 		"build": "astro build",
 		"dev": "astro dev --host",
+		"check": "astro check",
 		"format": "prettier -w .",
 		"format:dist": "prettier -w ./dist/ --ignore-path .prettierignore",
 		"preview": "astro preview --host",
 		"serve": "browser-sync start --server 'dist' --no-ui"
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.9.9",
 		"sanitize.css": "^13.0.0",
-		"sass-embedded": "^1.98.0"
+		"sass-embedded": "^1.99.0",
+		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
-		"astro": "^6.1.3",
-		"autoprefixer": "^10.4.27",
+		"astro": "^6.3.2",
+		"autoprefixer": "^10.5.0",
 		"browser-sync": "^3.0.2",
-		"patch-package": "^8.0.1",
-		"prettier": "^3.8.1",
+		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-package": "^2.0.0"
-	},
-	"volta": {
-		"node": "24.11.1"
 	}
 }

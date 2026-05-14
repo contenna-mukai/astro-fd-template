@@ -1,5 +1,11 @@
 # astro-fd-template
 
+## setup
+
+mise trust
+mise install
+npm install
+
 ## npm-scripts
 
 ```shell
@@ -14,4 +20,7 @@ $ npm run build
 
 # Format code
 $ npm run format
+
+# Check code
+$ npm run check
 ```

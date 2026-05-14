@@ -58,7 +58,7 @@ const clientRollupOutput = {
 };
 
 export default defineConfig({
-	site: 'https://sample.com/',
+	site: 'https://sample.com',
 	base: '/',
 	outDir: './dist',
 	compressHTML: false,
