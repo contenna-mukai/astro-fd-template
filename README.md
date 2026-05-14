@@ -2,9 +2,13 @@
 
 ## setup
 
-mise trust
-mise install
-npm install
+```shell
+$ mise trust
+
+$ mise install
+
+$ npm install
+```
 
 ## npm-scripts
 
